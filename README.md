@@ -7,7 +7,7 @@ Este es el documento de diseño de la API para gestionar terceros de la solució
 * [GestionTicket](gestionTicket.md): `helpDesk/documentation/gestionTicket`
 * [Prioridad](prioridad.md): `helpDesk/documentation/prioridad`
 * [Estado](estado.md): `helpDesk/documentation/estado`
-* [usuario](usuario.md): `helpDesk/documentation/usuario`
+* [Usuario](usuario.md): `helpDesk/documentation/usuario`
 * [Cliente](cliente.md): `helpDesk/documentation/cliente`
 * [Rol](rol.md): `helpDesk/documentation/rol`
 
