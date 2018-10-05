@@ -15,6 +15,8 @@ Este recurso contará con los siguientes campos:
 * [idResponsable]: usuario asignado para tramitar el ticket
 * [fechaCambioEstado]: fecha en que la solicitud del cliente es atendida y por ende, cambia de estado
 
+Ejemplo en mocky.io: http://www.mocky.io/v2/5bb7d6e53000004700f93b12
+
 
 Estos recursos contarán con 5 operaciones:
 
