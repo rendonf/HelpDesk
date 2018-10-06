@@ -4,12 +4,12 @@ Trabajo final - Ingeniería de software II UCEVA
 Este es el documento de diseño de la API para gestionar terceros de la solución. Esta API cuenta con 7 recursos:
 
 * [Ticket](Resources/ticket.md): `HelpDesk/blob/documentation/Resources/ticket` 
-* [GestionTicket](gestionTicket.md): `HelpDesk/blob/documentation/Resources/gestionTicket`
-* [Prioridad](prioridad.md): `HelpDesk/blob/documentation/Resources/prioridad`
-* [Estado](estado.md): `HelpDesk/blob/documentation/Resources/estado`
-* [Usuario](usuario.md): `HelpDesk/blob/documentation/Resources/usuario`
-* [Cliente](cliente.md): `HelpDesk/blob/documentation/Resources/cliente`
-* [Rol](rol.md): `HelpDesk/blob/documentation/Resources/rol`
+* [GestionTicket](Resources/gestionTicket.md): `HelpDesk/blob/documentation/Resources/gestionTicket`
+* [Prioridad](Resources/prioridad.md): `HelpDesk/blob/documentation/Resources/prioridad`
+* [Estado](Resources/estado.md): `HelpDesk/blob/documentation/Resources/estado`
+* [Usuario](Resources/usuario.md): `HelpDesk/blob/documentation/Resources/usuario`
+* [Cliente](Resources/cliente.md): `HelpDesk/blob/documentation/Resources/cliente`
+* [Rol](Resources/rol.md): `HelpDesk/blob/documentation/Resources/rol`
 
 
 Estos recursos contarán con 5 operaciones:
