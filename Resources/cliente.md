@@ -6,13 +6,12 @@ Descripción del recurso cliente:
 Este recurso contará con los siguientes campos:
 
 * [id]: (primary key, int) Código autoincrementable
+* [codigo] (string)  C + entero incrementable correspondiente
 * [nombre]: (string) Almacenará el nombre completo del cliente o empresa que puede generar tickets
+* [clave]: (String) Contraseña del cliente
 * [correo]: (string) Correo de contacto con el cliente
-* [NIT]: (int) NIT de la empresa
+* [NIT]: (foreign, int) NIT de la empresa
 * [telefono]: (int) Teléfono de contacto del cliente
-
-Ejemplo en mocky.io: http://www.mocky.io/v2/5bc3f13030000010007586ed
-
 
 Estos recursos contarán con 5 operaciones:
 
@@ -24,63 +23,77 @@ Estos recursos contarán con 5 operaciones:
 | __Show__              | `GET helpDesk/develop/:resource:/:id:`                              | Retorna la instancia identificada por `:id:` del recurso `:resource:`  |
 | __Destroy__           | `DELETE helpDesk/develop/:resource:/:id:`                           | Elimina la instancia identificada por `:id:` del recurso `:resource:`
 
-##Método POST
+## Método POST
 #### Create
 
-Crea una instacia del recurso `:resource:`.  Las entradas de `:nombre:`, `:correo:` y `:telefono:` son campos obligatorios, el campo `:NIT:` solo es requerido para las empresas.
+Crea una instacia del recurso `:resource:`.  
 
-Ejemplo en mocky.io: http://www.mocky.io/v2/5bc3f13030000010007586ed
+El campo `:codigo:` es un identificador de los roles que se genera en el Fronend . Las entradas de `:nombre:`, `:clave:`, `:correo:` y `:telefono:` son campos obligatorios, el campo `:NIT:` se ingresa por default dependiendo del espacio de ayuda.
+
+Ejemplo en mocky.io: http://www.mocky.io/v2/5bc67f0b32000060000b034b
 
 ```json
 Cliente
 {
     "id": 1,
-    "nombre": "Jeeremías Aragón",
-    "correo": "jere@correo.com",
-    "NIT": 1234567987,
-    "telefono": 3998887766
+	"codigo": "C0001",
+	"nombre": "Jeeremías Aragón",
+	"clave": "miclave01",
+	"correo": "jere@correo.com",
+	"NIT": 5278295,
+	"telefono": 3998887766
 }
 ```
 
-##Método PUT
+## Método PUT
 #### Update
 
-Modifica la instancia identificada por `:id:` del recurso `:resource:`. Solo las entradas de `:nombre:`, `:correo:` y `:telefono:` se pueden modificar.
+Modifica la instancia identificada por `:id:` del recurso `:resource:`. Solo las entradas de `:nombre:`, `:clave:, ``:correo:` y `:telefono:` se pueden modificar.
 
-Ejemplo en mocky.io:
+Ejemplo en mocky.io: http://www.mocky.io/v2/5bc67ffb32000084000b034d
 
 ```json
-
+Cliente
+{
+    "id": 1,
+    "codigo": "C0001",
+    "nombre": "Jeeremías Aragón",
+    "clave": "otraclave2",
+    "correo": "jere@correo.com",
+    "NIT": 5278295,
+    "telefono": 555555555
+}
 ```
 
-##Método GET
+## Método GET
 #### Index
 
 Lista toda las instancias del recurso `:resource:`. No se modifica ningún campo.
 
-Ejemplo en mocky.io:
-
-```json
-
-```
 
 #### Show
 
 Retorna la instancia identificada por `:id:` del recurso `:resource:`. No se modifica ningún campo.
 
-Ejemplo en mocky.io: 
+Ejemplo en mocky.io: http://www.mocky.io/v2/5bc680473200004e000b034e
 
 ```json
-
+Cliente
+{
+    "id": 1
+}
 ```
 
-##Método DELETE
+## Método DELETE
 #### Destroy
 
 Elimina la instancia identificada por `:id:` del recurso `:resource:`.
 
-Ejemplo en mocky.io:
+Ejemplo en mocky.io: http://www.mocky.io/v2/5bc680473200004e000b034e
 
 ```json
-
+Cliente
+{
+    "id": 1
+}
 ```
