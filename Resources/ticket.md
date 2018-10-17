@@ -7,6 +7,7 @@ Este recurso contará con los siguientes campos:
 
 * [id]:  (primary key, int) Código autoincrementable
 * [asunto]: (string) Título del ticket 
+* [modulo]: (foreign key, int) Indica el respectivo módulo donde se encuentra el problema, apunta al recurso *modulo*
 * [descripcion]: (string) Breve resumen de la incidencia que presenta el usuario
 * [fechaCreacion]: (date) Fecha en que se creó el ticket
 * [cliente]: (foreign key, int) Cliente que genera el ticket 
@@ -30,15 +31,16 @@ Estos recursos contarán con 5 operaciones:
 
 Crea una instacia del recurso `:resource:`. 
 
-Los campos de `:asunto:`, `:descripcion:` y `:cliente:` son obligatorios, el campo  `:fechaCreacion:` lo genera el sistema, el campo `:estado:` lo genera el sistema por default con la etiqueta en *Espera*  y campo de `:prioridad:` es asignados después de una revisión previa del ticket.
+Los campos de `:asunto:`, `:modulo:`, `:descripcion:` y `:cliente:` son obligatorios, el campo  `:fechaCreacion:` lo genera el sistema, el campo `:estado:` lo genera el sistema por default con la etiqueta en *Espera*  y el campo `:prioridad:` es asignado después de una previa revisión del ticket.
 
-Ejemplo en mocky.io: http://www.mocky.io/v2/5bc6bb8a3200007c000b03c8
+Ejemplo en mocky.io: http://www.mocky.io/v2/5bc757d8320000013b0b07ff
 
 ```json
 Ticket
 {
     "id":1,
     "asunto":"no puedo iniciar sesión",
+    "modulo": null,
     "descripcion":"me robaron la contraseña y requiero cambiarla urgentemente",
     "fechaCreacion":"5/10/2018",
     "cliente":34,
@@ -60,6 +62,7 @@ Ticket
 {
     "id":1,
     "asunto":"no puedo iniciar sesión",
+    "modulo": null,
     "descripcion":"me robaron la contraseña y requiero cambiarla urgentemente",
     "fechaCreacion":"5/10/2018",
     "cliente":34,

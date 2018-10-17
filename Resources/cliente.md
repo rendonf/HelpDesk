@@ -10,7 +10,7 @@ Este recurso contará con los siguientes campos:
 * [nombre]: (string) Almacenará el nombre completo del cliente o empresa que puede generar tickets
 * [clave]: (String) Contraseña del cliente
 * [correo]: (string) Correo de contacto con el cliente
-* [NIT]: (foreign, int) NIT de la empresa
+* [NIT]: (foreign key, int) NIT de la empresa
 * [telefono]: (int) Teléfono de contacto del cliente
 
 Estos recursos contarán con 5 operaciones:
