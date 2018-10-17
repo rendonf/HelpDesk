@@ -1,23 +1,28 @@
-# HelpDesk
+﻿# HelpDesk
 Trabajo final - Ingeniería de software II UCEVA
 
 Descripción del recurso estado:
 
 Este recurso contará con los siguientes campos:
 
-* [id]: código autoincrementable
-* [descripción]: breve resumen del estado del ticket, el cual nos indica el procesamiento y estado en que se encuentra la incidencia reportada por un usuario
+* [id]: (primary key, int) Código autoincrementable
+* [descripcion]: (string)  Nombre del estado en la base de datos
 
+Los estados del tickets serán las siguientes:
 
-Ejemplo en mocky.io: http://www.mocky.io/v2/5bbbadea3200007e0027e9e7
+-  *Espera* :  Aún no se ha asignado un responsable y dado una prioridad
+-  *Proceso* :  Ya se asigno un reponsable y esta en proceso de solución del problema
+-  *Resuelta* :  El problema ya ha sido resuelto.
 
+Ejemplo en mocky.io: http://www.mocky.io/v2/5bc665ca32000078000b032e
 
-Estos recursos contarán con 5 operaciones:
-
-| Operación             | Endpoint                                                            | Descripción                                                            |
-| --------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| __Create__            | `POST helpDesk/develop/:resource:`                                       | Crea una instancia del recurso `:resource:`.                           |
-| __Update__            | `PUT helpDesk/develop/:resource:/:id:`                                   | Modifica la instancia identificada por `:id:` del recurso `:resource:` |
-| __Index__             | `GET helpDesk/develop/:resource:`                                        | Lista toda las instancias del recurso `:resource:`                     |
-| __Show__              | `GET helpDesk/develop/:resource:/:id:`                                   | Retorna la instancia identificada por `:id:` del recurso `:resource:`  |
-| __Destroy__           | `DELETE helpDesk/develop/:resource:/:id:`                                | Elimina la instancia identificada por `:id:` del recurso `:resource:`  |
+```json
+Estados
+{
+    "estado": [
+        {"id": 1, "descripcion": "Espera"},
+        {"id": 2, "descripcion": "Proceso"},
+        {"id": 3, "descripcion": "Resuelta"}
+    ]
+}
+```
